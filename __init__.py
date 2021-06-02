@@ -1,13 +1,21 @@
 from binaryninja import *
 import ctypes
 import os
+import platform
 
 
 BUFFER_LENGTH = 512
 DIR = os.path.dirname(os.path.realpath(__file__))
+EXT = {
+	'Linux': 'so',
+	'Windows': 'dll',
+	'Darwin': 'dylib'
+}[platform.system()]
 
-print(f'LOADING {DIR}/rustc-demangle/target/release/librustc_demangle.so')
-rustc_demangle = ctypes.CDLL(f'{DIR}/rustc-demangle/target/release/librustc_demangle.so').rustc_demangle
+
+
+print(f'LOADING {DIR}/rustc-demangle/target/release/librustc_demangle.{EXT}')
+rustc_demangle = ctypes.CDLL(f'{DIR}/rustc-demangle/target/release/librustc_demangle.{EXT}').rustc_demangle
 
 
 
