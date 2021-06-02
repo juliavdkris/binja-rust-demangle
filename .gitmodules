@@ -1,0 +1,3 @@
+[submodule "rustc-demangle"]
+	path = rustc-demangle
+	url = git@github.com:alexcrichton/rustc-demangle.git
