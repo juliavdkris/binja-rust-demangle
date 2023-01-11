@@ -9,7 +9,7 @@ Binary Ninja wrapper plugin for Alex Crichton's rustc-demangle crate
 # Installation
 - Recursively clone this repository into your plugins folder
 	```bash
-	git clone --recursive https://github.com/samvdkris/binja-rust-demangle.git
+	git clone --recursive https://github.com/juliavdkris/binja-rust-demangle.git
 	```
 	Plugin folder locations:
 	- **Linux:** `~/.binaryninja/plugins/`
